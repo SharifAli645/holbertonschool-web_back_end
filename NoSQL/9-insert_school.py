@@ -4,6 +4,7 @@ collection"""
 
 
 def insert_school(mongo_collection, **kwargs):
+    """Function that inserst a document"""
     dicty = {}
     for k, v in kwargs.items():
         dicty[k] = v
