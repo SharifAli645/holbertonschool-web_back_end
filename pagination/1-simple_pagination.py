@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Module that contains a class Server"""
 import csv
 import math
 from typing import List
