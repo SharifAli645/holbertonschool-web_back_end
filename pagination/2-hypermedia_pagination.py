@@ -49,7 +49,7 @@ class Server:
         t_page = len(datos) // page_size + (1 if len(datos) %
                                             page_size != 0 else 0)
         page_size = len(self.get_page(page, page_size))
-        n_page = (None if len(data) == 0 else page + 1)
+        n_page = (None if page > t_page else page + 1)
         dicty = {"page_size": page_size, "page": page, "data": data,
                  "next_page": n_page, "prev_page": p_page,
                  "total_pages": t_page}
