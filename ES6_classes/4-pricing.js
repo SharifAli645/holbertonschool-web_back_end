@@ -27,11 +27,11 @@ export default class Pricing {
     this._amount = value;
   }
   
-  set currency(value) {
-    if (typeof value !== 'object') {
+  set currency(valu) {
+    if (typeof valu !== 'object') {
       throw new TypeError('Currency must be a number');
     }
-    this._currency = value;
+    this._currency = valu;
   }
   
   displayFullPrice() {
