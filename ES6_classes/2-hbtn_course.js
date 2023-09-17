@@ -1,5 +1,14 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
+    if (typeof name !== 'string') {
+      throw new TypeError('Name must be a string');
+    }
+    if (typeof length !== 'number') {
+      throw new TypeError('Length must be a number');
+    }
+    if (typeof students !== 'object') {
+      throw new TypeError('Students must be an object');
+    }
     this._name = name;
     this._length = length;
     this._students = students;
@@ -17,30 +26,27 @@ export default class HolbertonCourse {
     return this._students;
   }
 
-  set name(n_name) {
-    if (typeof n_name === 'string') {
-      this._name = n_name;
-    }
-    else {
-      throw new Error("TypeError: Name must be a string");
+  set name(value) {
+    if (typeof value === 'string') {
+      this._name = value;
+    } else {
+      throw new Error('TypeError: Name must be a string');
     }
   }
 
-  set length(n_length) {
-    if (typeof n_length === 'number') {
-      this._length = n_length;
+  set length(value) {
+    if (typeof value === 'number') {
+      this._length = value;
+    } else {
+      throw new Error('TypeError: Name must be a number');
     }
-    else {
-      throw new Error("TypeError: Name must be a number");
-    } 
   }
 
-  set students(n_students) {
-    if (typeof n_students === 'object') {
-      this._students = n_students;
-    }
-    else {
-      throw new Error("TypeError: Name must be an object");
+  set students(value) {
+    if (typeof value === 'object') {
+      this._students = value;
+    } else {
+      throw new Error('TypeError: Name must be an object');
     }
   }
 }
