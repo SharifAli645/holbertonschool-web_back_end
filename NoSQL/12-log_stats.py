@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module that works with mongoDB
 """
-from pymongo import MongoCLient
+from pymongo import MongoClient
 
 
 if __name__ == "__main__":
