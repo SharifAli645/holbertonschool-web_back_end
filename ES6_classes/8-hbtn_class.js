@@ -5,9 +5,10 @@ export default class HolbertonClass {
   }
 
   toString() {
-    return this._size;
-  }
-  valueOf() {
     return this._location;
+  }
+  
+  valueOf() {
+    return this._size;
   }
 }
