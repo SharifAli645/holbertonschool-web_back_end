@@ -1,11 +1,12 @@
 import { uploadPhoto, createUser } from './utils';
-let body = '';
+
 function handleProfileSignup() {
+  let body = '';
   uploadPhoto().then((success) => {
     body = success.body;
   });
   createUser().then((success) => {
-    console.log(body, success.firstName, success.lastName);
+    console.log(`${body} ${success.firstName} ${success.lastName}`);
   });
 }
 
