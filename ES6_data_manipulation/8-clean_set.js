@@ -1,10 +1,11 @@
-function cleanSet (conjunto, filtro) {
-  const resultado = [];
-
-  for (const cadena of conjunto) {
-    if (cadena.includes(filtro) && filtro !== '') { resultado.push(cadena.replace(filtro, '')); }
+export default function cleanSet(set, string) {
+  const list = [];
+  if (string && typeof string === "string") {
+    const arr = Array.from(set);
+    arr.forEach((str) => {
+      if (str && str.startsWith(string))
+        list.push(str.slice(string.length));
+    });
   }
-  return resultado.join('-');
+  return list.join("-");
 }
-
-export default cleanSet;
